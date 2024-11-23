@@ -1,0 +1,68 @@
+@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Lovers+Quarrel&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
+body {
+    margin: 0;
+    font-family: "Sour Gummy", sans-serif;
+    background: #fef6e4;
+    color: #333;
+  }
+  
+  header {
+    text-align: center;
+    padding: 20px;
+    background: #c1121f;
+    color: white;
+  }
+  
+  header h1 {
+    margin: 0;
+  }
+  
+  main {
+    padding: 20px;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  
+/* As imagens ocupam toda a tela disponível */
+.swiper-slide img {
+    width: 50vw; /* Ocupa toda a largura da tela */
+    height: 50vh; /* Ocupa toda a altura da tela */
+    display: block;
+    object-fit: cover; /* Cobre toda a área disponível sem distorção */
+    object-position: center; /* Centraliza a imagem no container */
+  }
+  /* Garantir que o site ocupe toda a tela */
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+  }
+  
+  /* O container principal ocupa toda a tela disponível */
+  main {
+    display: flex;
+    align-items: center; /* Centraliza verticalmente */
+    justify-content: center; /* Centraliza horizontalmente */
+    height: 100%; /* Altura total da tela */
+    padding: 10px;
+    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
+  }
+  
+  /* Garantir que o header e o footer sejam responsivos */
+  header, footer {
+    width: 100%; /* Ocupa toda a largura */
+    text-align: center;
+  }
+  
+  .swiper-container {
+    width: 100%;
+    max-width: 600px; /* Limite de largura */
+    max-height: 80vh; /* Para que não ultrapasse 80% da altura */
+  }
+  
+  
