@@ -1,68 +1,90 @@
-@import url('https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Lovers+Quarrel&family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
-body {
-    margin: 0;
-    font-family: "Sour Gummy", sans-serif;
-    background: #fef6e4;
-    color: #333;
-  }
-  
-  header {
-    text-align: center;
-    padding: 20px;
-    background: #c1121f;
-    color: white;
-  }
-  
-  header h1 {
-    margin: 0;
-  }
-  
-  main {
-    padding: 20px;
-  }
-  
-  .swiper-container {
-    width: 100%;
-    max-width: 600px;
-    margin: 0 auto;
-  }
-  
-/* As imagens ocupam toda a tela disponível */
-.swiper-slide img {
-    width: 50vw; /* Ocupa toda a largura da tela */
-    height: 50vh; /* Ocupa toda a altura da tela */
-    display: block;
-    object-fit: cover; /* Cobre toda a área disponível sem distorção */
-    object-position: center; /* Centraliza a imagem no container */
-  }
-  /* Garantir que o site ocupe toda a tela */
+@import url('https://fonts.googleapis.com/css2?family=Sour+Gummy:ital,wght@0,100..900;1,100..900&display=swap');
 html, body {
-    margin: 0;
-    padding: 0;
-    width: 100%;
-    height: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden; /* Remove scroll */
+  font-family: "Sour Gummy", sans-serif;
+  background: #fef6e4;
+  color: #333;
+}
+
+header {
+  text-align: center;
+  padding: 20px;
+  background: #c1121f;
+  color: white;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 24px; /* Tamanho padrão */
+}
+
+main {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: calc(100% - 60px); /* Ajusta para incluir o header */
+}
+
+.swiper-container {
+  width: 100%;
+  max-width: 600px; /* Limita o slider em telas maiores */
+  margin: 0 auto;
+}
+
+.swiper-slide {
+  display: flex;
+  justify-content: center;
+}
+
+.swiper-slide img {
+  width: 100%;
+  height: auto; /* Ajusta a altura proporcionalmente */
+  object-fit: cover; /* Preenche o espaço sem distorcer */
+  object-position: center; /* Centraliza a imagem */
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Sombra */
+}
+
+/* Responsividade para tablets */
+@media (max-width: 768px) {
+  header h1 {
+    font-size: 20px; /* Tamanho menor para tablets */
   }
-  
-  /* O container principal ocupa toda a tela disponível */
-  main {
-    display: flex;
-    align-items: center; /* Centraliza verticalmente */
-    justify-content: center; /* Centraliza horizontalmente */
-    height: 100%; /* Altura total da tela */
-    padding: 10px;
-    box-sizing: border-box; /* Inclui padding no cálculo do tamanho */
-  }
-  
-  /* Garantir que o header e o footer sejam responsivos */
-  header, footer {
-    width: 100%; /* Ocupa toda a largura */
-    text-align: center;
-  }
-  
+
   .swiper-container {
-    width: 100%;
-    max-width: 600px; /* Limite de largura */
-    max-height: 80vh; /* Para que não ultrapasse 80% da altura */
+    max-width: 90%; /* Reduz a largura do slider */
   }
-  
-  
+
+  .swiper-slide img {
+    max-height: 400px; /* Altura máxima ajustada */
+  }
+}
+
+/* Responsividade para celulares */
+@media (max-width: 480px) {
+  header h1 {
+    font-size: 18px; /* Fonte ainda menor */
+  }
+
+  header {
+    padding: 15px; /* Menor espaçamento no header */
+  }
+
+  main {
+    padding: 10px; /* Reduz padding no conteúdo principal */
+  }
+
+  .swiper-container {
+    max-width: 95%; /* Ocupa quase toda a largura do celular */
+  }
+
+  .swiper-slide img {
+    max-height: 300px; /* Altura máxima ajustada */
+  }
+}
